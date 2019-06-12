@@ -32,6 +32,11 @@ class ViewController: UIViewController {
         self.title = appTitle
         setupApp()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,14 +54,6 @@ class ViewController: UIViewController {
         } else {
             // exit app
             UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
-        }
-    }
-    // open menu in page, or fire alternate function on large screens
-    @IBAction func onRightButtonClick(_ sender: Any) {
-        if (changeMenuButtonOnWideScreens && isWideScreen()) {
-            webView.evaluateJavaScript(alternateRightButtonJavascript, completionHandler: nil)
-        } else {
-            webView.evaluateJavaScript(menuButtonJavascript, completionHandler: nil)
         }
     }
     // reload page from offline screen
@@ -83,7 +80,6 @@ class ViewController: UIViewController {
         }
         if (keyPath == #keyPath(WKWebView.estimatedProgress)) {
             progressBar.progress = Float(webView.estimatedProgress)
-            rightButton.isEnabled = (webView.estimatedProgress == 1)
         }
     }
     
@@ -151,31 +147,8 @@ class ViewController: UIViewController {
         offlineIcon.tintColor = offlineIconColor
         offlineButton.tintColor = buttonColor
         offlineView.isHidden = true
-        
-        // setup navigation bar
-        if (forceLargeTitle) {
-            if #available(iOS 11.0, *) {
-                navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
-            }
-        }
-        if (useLightStatusBarStyle) {
-            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        }
-        
-        // handle menu button changes
-        /// set default
-        rightButton.title = menuButtonTitle
-        /// update if necessary
-        updateRightButtonTitle(invert: false)
-        /// create callback for device rotation
-        let deviceRotationCallback : (Notification) -> Void = { _ in
-            // this fires BEFORE the UI is updated, so we check for the opposite orientation,
-            // if it's not the initial setup
-            self.updateRightButtonTitle(invert: true)
-        }
-        /// listen for device rotation
-        NotificationCenter.default.addObserver(forName: .UIDeviceOrientationDidChange, object: nil, queue: .main, using: deviceRotationCallback)
 
+        
         /*
         // @DEBUG: test offline view
         offlineView.isHidden = false
@@ -212,45 +185,12 @@ class ViewController: UIViewController {
             return false
         }
     }
-    
-    // UI Helper method to update right button text according to available screen width
-    func updateRightButtonTitle(invert: Bool) {
-        if (changeMenuButtonOnWideScreens) {
-            // first, check if device is wide enough to
-            if (UIScreen.main.fixedCoordinateSpace.bounds.height < wideScreenMinWidth) {
-                // long side of the screen is not long enough, don't need to update
-                return
-            }
-            // second, check if both portrait and landscape would fit
-            if (UIScreen.main.fixedCoordinateSpace.bounds.height >= wideScreenMinWidth
-                && UIScreen.main.fixedCoordinateSpace.bounds.width >= wideScreenMinWidth) {
-                // both orientations are considered "wide"
-                rightButton.title = alternateRightButtonTitle
-                return
-            }
-            
-            // if we land here, check the current screen width.
-            // we need to flip it around in some cases though, as our callback is triggered before the UI is updated
-            let changeToAlternateTitle = invert
-                ? !isWideScreen()
-                : isWideScreen()
-            if (changeToAlternateTitle) {
-                rightButton.title = alternateRightButtonTitle
-            } else {
-                rightButton.title = menuButtonTitle
-            }
-        }
-    }
 }
 
 // WebView Event Listeners
 extension ViewController: WKNavigationDelegate {
     // didFinish
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        // set title
-        if (changeAppTitleToPageTitle) {
-            navigationItem.title = webView.title
-        }
         // hide progress bar after initial load
         progressBar.isHidden = true
         // hide activity indicator
