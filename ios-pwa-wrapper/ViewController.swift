@@ -86,7 +86,7 @@ class ViewController: UIViewController {
     // Initialize WKWebView
     func setupWebView() {
         // set up webview
-        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: webViewContainer.frame.width, height: webViewContainer.frame.height))
+        webView = FullScreenWKWebView(frame: CGRect(x: 0, y: 0, width: webViewContainer.frame.width, height: webViewContainer.frame.height))
         webView.navigationDelegate = self
         webView.uiDelegate = self
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -236,5 +236,12 @@ extension ViewController: WKUIDelegate {
                 decisionHandler(.cancel)
             }
         }
+    }
+}
+
+// Make WKWebView to extend over the iPhone X home screen button
+class FullScreenWKWebView: WKWebView {
+    override var safeAreaInsets: UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }

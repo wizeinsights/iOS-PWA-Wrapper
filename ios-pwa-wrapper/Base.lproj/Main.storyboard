@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ON9-GN-Pta">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ON9-GN-Pta">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_pwa_wrapper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -26,19 +26,19 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PAe-DD-sEP">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="113"/>
+                                        <rect key="frame" x="0.0" y="180" width="375" height="81"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud_off" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-1O-6cw">
-                                                <rect key="frame" x="163.5" y="0.0" width="48" height="48"/>
+                                                <rect key="frame" x="179.5" y="0.0" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are offline." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2o9-AL-VUQ">
-                                                <rect key="frame" x="123.5" y="48" width="128.5" height="24"/>
+                                                <rect key="frame" x="123.5" y="16" width="128.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M9z-jX-53J">
-                                                <rect key="frame" x="101" y="72" width="173" height="41"/>
+                                                <rect key="frame" x="101" y="40" width="173" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <state key="normal" title="Tap here to retry!"/>
                                                 <connections>
@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-j7-EfD">
-                                        <rect key="frame" x="169" y="267.5" width="37" height="37"/>
+                                        <rect key="frame" x="169" y="268" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,18 +72,14 @@
                         <constraints>
                             <constraint firstItem="HnO-cS-a4I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Ug-Ri-DYo"/>
                             <constraint firstItem="HnO-cS-a4I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6t2-kT-aXm"/>
-                            <constraint firstItem="P71-RQ-w3Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7Mx-39-uRU"/>
-                            <constraint firstItem="HnO-cS-a4I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JRX-v6-mMT"/>
+                            <constraint firstItem="P71-RQ-w3Y" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="7Mx-39-uRU"/>
                             <constraint firstItem="yda-zQ-zIG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NI8-nf-K0C"/>
-                            <constraint firstItem="HnO-cS-a4I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NPb-ae-PDf"/>
+                            <constraint firstItem="HnO-cS-a4I" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="NPb-ae-PDf"/>
                             <constraint firstItem="P71-RQ-w3Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Orj-az-JIO"/>
                             <constraint firstItem="yda-zQ-zIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="PKU-aR-WIX"/>
                             <constraint firstItem="P71-RQ-w3Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TlA-35-iyi"/>
-                            <constraint firstItem="HnO-cS-a4I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YQr-yE-Fj0"/>
                             <constraint firstItem="HnO-cS-a4I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YhM-LV-Tya"/>
-                            <constraint firstItem="HnO-cS-a4I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zu4-1h-MTC"/>
-                            <constraint firstItem="yda-zQ-zIG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iHx-Ip-sA5"/>
-                            <constraint firstItem="HnO-cS-a4I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ovE-sY-kNb"/>
+                            <constraint firstItem="yda-zQ-zIG" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="iHx-Ip-sA5"/>
                             <constraint firstItem="P71-RQ-w3Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wb5-bQ-9sI"/>
                             <constraint firstItem="yda-zQ-zIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wyR-np-tM4"/>
                         </constraints>
@@ -119,7 +115,6 @@
         <!--Navigation Controller-->
         <scene sceneID="1sK-l5-PHi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ej4-Id-CRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ON9-GN-Pta" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uik-Iv-Zgf">
@@ -131,6 +126,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EHQ-9R-Its"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ej4-Id-CRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.59999999999999" y="476.76161919040482"/>
         </scene>
