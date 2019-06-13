@@ -12,10 +12,6 @@ import UIKit
 let appTitle = "Wize"
 let webAppUrl = URL(string: "https://www.wizeinsights.com/app")
 let allowedOrigin = "www.wizeinsights.com"
-let menuButtonTitle = NSLocalizedString("menu", comment: "")
-let menuButtonJavascript = """
-    $('.button-collapse').sideNav('show');
-"""
 let useUserAgentPostfix = true
 let userAgentPostfix = "iOSApp"
 let useCustomUserAgent = false
@@ -28,12 +24,7 @@ let enableBounceWhenScrolling = true
 
 // change Menu button depending on screen width
 // IMPORTANT: do not enable this yet, it's still buggy
-let changeMenuButtonOnWideScreens = false
 let wideScreenMinWidth = CGFloat(993) // your CSS Media Query px-breakpoint
-let alternateRightButtonTitle = NSLocalizedString("share", comment: "")
-let alternateRightButtonJavascript = """
-    $('#share-link').click();
-"""
 
 // Colors & Styles
 let useLightStatusBarStyle = true
