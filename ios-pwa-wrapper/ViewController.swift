@@ -173,7 +173,7 @@ class ViewController: UIViewController {
     deinit {
         webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.isLoading))
         webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
-        NotificationCenter.default.removeObserver(self, name: .UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     // Helper method to determine wide screen width
