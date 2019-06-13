@@ -12,8 +12,6 @@ import WebKit
 class ViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var leftButton: UIBarButtonItem!
-    @IBOutlet weak var rightButton: UIBarButtonItem!
     @IBOutlet weak var webViewContainer: UIView!
     @IBOutlet weak var offlineView: UIView!
     @IBOutlet weak var offlineIcon: UIImageView!
@@ -43,19 +41,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // UI Actions
-    // handle back press
-    @IBAction func onLeftButtonClick(_ sender: Any) {
-        if (webView.canGoBack) {
-            webView.goBack()
-            // fix a glitch, as the above seems to trigger observeValue -> WKWebView.isLoading
-            activityIndicatorView.isHidden = true
-            activityIndicator.stopAnimating()
-        } else {
-            // exit app
-            UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
-        }
-    }
     // reload page from offline screen
     @IBAction func onOfflineButtonClick(_ sender: Any) {
         offlineView.isHidden = true
@@ -133,7 +118,7 @@ class ViewController: UIViewController {
         // leftButton.isEnabled = false
 
         // progress bar
-        progressBar = UIProgressView(frame: CGRect(x: 0, y: 0, width: webViewContainer.frame.width, height: 40))
+        progressBar = UIProgressView(frame: CGRect(x: 0, y: 0, width: webViewContainer.frame.width, height: 10))
         progressBar.autoresizingMask = [.flexibleWidth]
         progressBar.progress = 0.0
         progressBar.tintColor = progressBarColor
