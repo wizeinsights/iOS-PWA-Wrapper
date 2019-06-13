@@ -27,14 +27,12 @@ let enableBounceWhenScrolling = true
 let wideScreenMinWidth = CGFloat(993) // your CSS Media Query px-breakpoint
 
 // Colors & Styles
-let useLightStatusBarStyle = true
-let navigationBarColor = getColorFromHex(hex: 0xF44336, alpha: 1.0)
-let navigationTitleColor = getColorFromHex(hex: 0xFFFFFF, alpha: 1.0)
-let navigationButtonColor = navigationTitleColor
-let progressBarColor = getColorFromHex(hex: 0x4CAF50, alpha: 1.0)
+let wizeCyan = getColorFromHex(hex: 0x03b2dd, alpha: 1.0)
+
+let progressBarColor = wizeCyan
 let offlineIconColor = UIColor.darkGray
-let buttonColor = navigationBarColor
-let activityIndicatorColor = navigationBarColor
+let buttonColor = wizeCyan
+let activityIndicatorColor = wizeCyan
 
 // Color Helper function
 func getColorFromHex(hex: UInt, alpha: CGFloat) -> UIColor {
