@@ -36,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D504BEB1FA100E20019B279 /* ios-pwa-wrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-pwa-wrapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D504BEB1FA100E20019B279 /* wize-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wize-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D504BEE1FA100E20019B279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D504BF01FA100E20019B279 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D504BF31FA100E20019B279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D504BF81FA100E20019B279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D504BFB1FA100E20019B279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D504BFD1FA100E20019B279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D504C021FA100E20019B279 /* ios-pwa-wrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-pwa-wrapperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D504C021FA100E20019B279 /* wize-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wize-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D504C061FA100E20019B279 /* ios_pwa_wrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pwa_wrapperTests.swift; sourceTree = "<group>"; };
 		2D504C081FA100E20019B279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D504C0D1FA100E20019B279 /* ios-pwa-wrapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-pwa-wrapperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D504C0D1FA100E20019B279 /* wize-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wize-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D504C111FA100E20019B279 /* ios_pwa_wrapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pwa_wrapperUITests.swift; sourceTree = "<group>"; };
 		2D504C131FA100E20019B279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D64358A1FA62B5800ECC5D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -92,9 +92,9 @@
 		2D504BEC1FA100E20019B279 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D504BEB1FA100E20019B279 /* ios-pwa-wrapper.app */,
-				2D504C021FA100E20019B279 /* ios-pwa-wrapperTests.xctest */,
-				2D504C0D1FA100E20019B279 /* ios-pwa-wrapperUITests.xctest */,
+				2D504BEB1FA100E20019B279 /* wize-ios.app */,
+				2D504C021FA100E20019B279 /* wize-iosTests.xctest */,
+				2D504C0D1FA100E20019B279 /* wize-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D504BEA1FA100E20019B279 /* ios-pwa-wrapper */ = {
+		2D504BEA1FA100E20019B279 /* wize-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D504C161FA100E20019B279 /* Build configuration list for PBXNativeTarget "ios-pwa-wrapper" */;
+			buildConfigurationList = 2D504C161FA100E20019B279 /* Build configuration list for PBXNativeTarget "wize-ios" */;
 			buildPhases = (
 				2D504BE71FA100E20019B279 /* Sources */,
 				2D504BE81FA100E20019B279 /* Frameworks */,
@@ -147,14 +147,14 @@
 			);
 			dependencies = (
 			);
-			name = "ios-pwa-wrapper";
+			name = "wize-ios";
 			productName = "ios-pwa-wrapper";
-			productReference = 2D504BEB1FA100E20019B279 /* ios-pwa-wrapper.app */;
+			productReference = 2D504BEB1FA100E20019B279 /* wize-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D504C011FA100E20019B279 /* ios-pwa-wrapperTests */ = {
+		2D504C011FA100E20019B279 /* wize-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D504C191FA100E20019B279 /* Build configuration list for PBXNativeTarget "ios-pwa-wrapperTests" */;
+			buildConfigurationList = 2D504C191FA100E20019B279 /* Build configuration list for PBXNativeTarget "wize-iosTests" */;
 			buildPhases = (
 				2D504BFE1FA100E20019B279 /* Sources */,
 				2D504BFF1FA100E20019B279 /* Frameworks */,
@@ -165,14 +165,14 @@
 			dependencies = (
 				2D504C041FA100E20019B279 /* PBXTargetDependency */,
 			);
-			name = "ios-pwa-wrapperTests";
+			name = "wize-iosTests";
 			productName = "ios-pwa-wrapperTests";
-			productReference = 2D504C021FA100E20019B279 /* ios-pwa-wrapperTests.xctest */;
+			productReference = 2D504C021FA100E20019B279 /* wize-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2D504C0C1FA100E20019B279 /* ios-pwa-wrapperUITests */ = {
+		2D504C0C1FA100E20019B279 /* wize-iosUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D504C1C1FA100E20019B279 /* Build configuration list for PBXNativeTarget "ios-pwa-wrapperUITests" */;
+			buildConfigurationList = 2D504C1C1FA100E20019B279 /* Build configuration list for PBXNativeTarget "wize-iosUITests" */;
 			buildPhases = (
 				2D504C091FA100E20019B279 /* Sources */,
 				2D504C0A1FA100E20019B279 /* Frameworks */,
@@ -183,9 +183,9 @@
 			dependencies = (
 				2D504C0F1FA100E20019B279 /* PBXTargetDependency */,
 			);
-			name = "ios-pwa-wrapperUITests";
+			name = "wize-iosUITests";
 			productName = "ios-pwa-wrapperUITests";
-			productReference = 2D504C0D1FA100E20019B279 /* ios-pwa-wrapperUITests.xctest */;
+			productReference = 2D504C0D1FA100E20019B279 /* wize-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D504BE61FA100E20019B279 /* Build configuration list for PBXProject "ios-pwa-wrapper" */;
+			buildConfigurationList = 2D504BE61FA100E20019B279 /* Build configuration list for PBXProject "wize-ios" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,9 +231,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D504BEA1FA100E20019B279 /* ios-pwa-wrapper */,
-				2D504C011FA100E20019B279 /* ios-pwa-wrapperTests */,
-				2D504C0C1FA100E20019B279 /* ios-pwa-wrapperUITests */,
+				2D504BEA1FA100E20019B279 /* wize-ios */,
+				2D504C011FA100E20019B279 /* wize-iosTests */,
+				2D504C0C1FA100E20019B279 /* wize-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		2D504C041FA100E20019B279 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D504BEA1FA100E20019B279 /* ios-pwa-wrapper */;
+			target = 2D504BEA1FA100E20019B279 /* wize-ios */;
 			targetProxy = 2D504C031FA100E20019B279 /* PBXContainerItemProxy */;
 		};
 		2D504C0F1FA100E20019B279 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D504BEA1FA100E20019B279 /* ios-pwa-wrapper */;
+			target = 2D504BEA1FA100E20019B279 /* wize-ios */;
 			targetProxy = 2D504C0E1FA100E20019B279 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -456,11 +456,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MY78MLGX3Z;
+				DEVELOPMENT_TEAM = C2FTCJ883K;
 				INFOPLIST_FILE = "ios-pwa-wrapper/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wizeinsights.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wizeinsights.iosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -474,11 +474,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MY78MLGX3Z;
+				DEVELOPMENT_TEAM = C2FTCJ883K;
 				INFOPLIST_FILE = "ios-pwa-wrapper/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wizeinsights.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wizeinsights.iosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -499,7 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-pwa-wrapper.app/ios-pwa-wrapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wize-ios.app/wize-ios";
 			};
 			name = Debug;
 		};
@@ -516,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-pwa-wrapper.app/ios-pwa-wrapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wize-ios.app/wize-ios";
 			};
 			name = Release;
 		};
@@ -555,7 +555,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D504BE61FA100E20019B279 /* Build configuration list for PBXProject "ios-pwa-wrapper" */ = {
+		2D504BE61FA100E20019B279 /* Build configuration list for PBXProject "wize-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C141FA100E20019B279 /* Debug */,
@@ -564,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D504C161FA100E20019B279 /* Build configuration list for PBXNativeTarget "ios-pwa-wrapper" */ = {
+		2D504C161FA100E20019B279 /* Build configuration list for PBXNativeTarget "wize-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C171FA100E20019B279 /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D504C191FA100E20019B279 /* Build configuration list for PBXNativeTarget "ios-pwa-wrapperTests" */ = {
+		2D504C191FA100E20019B279 /* Build configuration list for PBXNativeTarget "wize-iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C1A1FA100E20019B279 /* Debug */,
@@ -582,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D504C1C1FA100E20019B279 /* Build configuration list for PBXNativeTarget "ios-pwa-wrapperUITests" */ = {
+		2D504C1C1FA100E20019B279 /* Build configuration list for PBXNativeTarget "wize-iosUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C1D1FA100E20019B279 /* Debug */,
