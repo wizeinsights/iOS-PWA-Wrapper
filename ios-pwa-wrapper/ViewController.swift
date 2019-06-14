@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // Hide native navigation bar since we handle this purely through React
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
@@ -132,7 +133,6 @@ class ViewController: UIViewController {
         offlineIcon.tintColor = offlineIconColor
         offlineButton.tintColor = buttonColor
         offlineView.isHidden = true
-
         
         /*
         // @DEBUG: test offline view
