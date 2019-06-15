@@ -10,8 +10,15 @@ import UIKit
 
 // Basic App-/WebView-configuration
 let appTitle = "Wize"
+
+#if DEBUG
 let webAppUrl = URL(string: "http://192.168.1.9:8000/app/")
 let allowedOrigin = "192.168.1.9"
+#else
+let webAppUrl = URL(string: "https://www.wizeinsights.com/app/")
+let allowedOrigin = "www.wizeinsights.com"
+#endif
+
 let useUserAgentPostfix = true
 let userAgentPostfix = "iOSApp"
 let useCustomUserAgent = false
