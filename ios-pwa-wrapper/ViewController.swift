@@ -160,16 +160,6 @@ class ViewController: UIViewController {
         webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
         NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
-    
-    // Helper method to determine wide screen width
-    func isWideScreen() -> Bool {
-        // this considers device orientation too.
-        if (UIScreen.main.bounds.width >= wideScreenMinWidth) {
-            return true
-        } else {
-            return false
-        }
-    }
 }
 
 // WebView Event Listeners

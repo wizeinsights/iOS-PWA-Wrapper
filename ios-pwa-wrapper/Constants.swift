@@ -29,10 +29,6 @@ let changeAppTitleToPageTitle = false
 let forceLargeTitle = false
 let enableBounceWhenScrolling = true
 
-// change Menu button depending on screen width
-// IMPORTANT: do not enable this yet, it's still buggy
-let wideScreenMinWidth = CGFloat(993) // your CSS Media Query px-breakpoint
-
 // Colors & Styles
 let wizeCyan = getColorFromHex(hex: 0x03b2dd, alpha: 1.0)
 
