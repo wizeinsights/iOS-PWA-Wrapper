@@ -14,6 +14,9 @@ let appTitle = "Wize"
 #if DEBUG
 let webAppUrl = URL(string: "http://192.168.1.9:8000/app/")
 let allowedOrigin = "192.168.1.9"
+#elseif STAGING
+let webAppUrl = URL(string: "https://staging.wizeinsights.com/app/")
+let allowedOrigin = "staging.wizeinsights.com"
 #else
 let webAppUrl = URL(string: "https://www.wizeinsights.com/app/")
 let allowedOrigin = "www.wizeinsights.com"
