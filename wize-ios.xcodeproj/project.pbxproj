@@ -553,7 +553,7 @@
 			};
 			name = Release;
 		};
-		55E3ABE522B804B600314B1B /* Staging */ = {
+		55039E4822B99E4700BF1EBD /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -588,10 +588,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "STAGING=1";
@@ -602,16 +602,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGING;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Staging;
 		};
-		55E3ABE622B804B600314B1B /* Staging */ = {
+		55039E4922B99E4700BF1EBD /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -629,7 +628,7 @@
 			};
 			name = Staging;
 		};
-		55E3ABE722B804B600314B1B /* Staging */ = {
+		55039E4A22B99E4700BF1EBD /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -646,7 +645,7 @@
 			};
 			name = Staging;
 		};
-		55E3ABE822B804B600314B1B /* Staging */ = {
+		55039E4B22B99E4700BF1EBD /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -669,8 +668,8 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C141FA100E20019B279 /* Debug */,
+				55039E4822B99E4700BF1EBD /* Staging */,
 				2D504C151FA100E20019B279 /* Release */,
-				55E3ABE522B804B600314B1B /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -679,8 +678,8 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C171FA100E20019B279 /* Debug */,
+				55039E4922B99E4700BF1EBD /* Staging */,
 				2D504C181FA100E20019B279 /* Release */,
-				55E3ABE622B804B600314B1B /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -689,8 +688,8 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C1A1FA100E20019B279 /* Debug */,
+				55039E4A22B99E4700BF1EBD /* Staging */,
 				2D504C1B1FA100E20019B279 /* Release */,
-				55E3ABE722B804B600314B1B /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -699,8 +698,8 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D504C1D1FA100E20019B279 /* Debug */,
+				55039E4B22B99E4700BF1EBD /* Staging */,
 				2D504C1E1FA100E20019B279 /* Release */,
-				55E3ABE822B804B600314B1B /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -46,7 +46,11 @@ class ViewController: UIViewController {
     @IBAction func onOfflineButtonClick(_ sender: Any) {
         offlineView.isHidden = true
         webViewContainer.isHidden = false
+        
+        activityIndicatorView.alpha = 0.0
         activityIndicatorView.isHidden = false
+        activityIndicatorView.fadeIn()
+        
         tryLoadAppUrl()
     }
     
@@ -143,7 +147,6 @@ class ViewController: UIViewController {
     
     // Cleanup
     deinit {
-        webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.isLoading))
         webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
         NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
@@ -156,8 +159,10 @@ extension ViewController: WKNavigationDelegate {
         // hide progress bar after initial load
         progressBar.isHidden = true
         // hide activity indicator
-        activityIndicatorView.isHidden = true
-        activityIndicator.stopAnimating()
+        activityIndicatorView.fadeOut(delay: 0.25, completion: { (finished: Bool) -> Void in
+          self.activityIndicator.stopAnimating()
+          self.activityIndicatorView.isHidden = true
+        })
     }
     
     // didFailProvisionalNavigation
@@ -184,10 +189,17 @@ extension ViewController: WKUIDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let requestUrl = navigationAction.request.url {
             if let requestHost = requestUrl.host {
-               if (requestHost.range(of: allowedOrigin) != nil ) {
+                if (requestHost.range(of: allowedOrigin) != nil ) {
                     decisionHandler(.allow)
                 } else {
                     decisionHandler(.cancel)
+                    
+                    // HACK: prevent googleads from launching a new Safari ta
+                    if (requestHost.range(of: "doubleclick.net") != nil) {
+                        print("blocked a request to Google Ads")
+                        return;
+                    }
+                    
                     if (UIApplication.shared.canOpenURL(requestUrl)) {
                         if #available(iOS 10.0, *) {
                             UIApplication.shared.open(requestUrl)
@@ -208,5 +220,18 @@ extension ViewController: WKUIDelegate {
 class FullScreenWKWebView: WKWebView {
     override var safeAreaInsets: UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+}
+
+extension UIView {
+    func fadeIn(_ duration: TimeInterval = 0.25, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.alpha = 1.0
+        }, completion: completion)  }
+    
+    func fadeOut(_ duration: TimeInterval = 0.25, delay: TimeInterval = 0.0, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.alpha = 0.0
+        }, completion: completion)
     }
 }
