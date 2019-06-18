@@ -22,6 +22,24 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yda-zQ-zIG">
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cEZ-24-kev">
+                                        <rect key="frame" x="123.5" y="232.5" width="128" height="128"/>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-j7-EfD">
+                                        <rect key="frame" x="169" y="360.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cEZ-24-kev" firstAttribute="centerX" secondItem="yda-zQ-zIG" secondAttribute="centerX" id="4Jc-pu-W8H"/>
+                                    <constraint firstItem="Khc-j7-EfD" firstAttribute="centerX" secondItem="yda-zQ-zIG" secondAttribute="centerX" id="DeQ-sV-gQ5"/>
+                                    <constraint firstItem="cEZ-24-kev" firstAttribute="centerY" secondItem="yda-zQ-zIG" secondAttribute="centerY" id="DlF-vf-abe"/>
+                                    <constraint firstItem="Khc-j7-EfD" firstAttribute="top" secondItem="cEZ-24-kev" secondAttribute="bottom" id="UKU-y4-vFi"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P71-RQ-w3Y" userLabel="Offline View">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
@@ -54,24 +72,6 @@
                                 <constraints>
                                     <constraint firstItem="PAe-DD-sEP" firstAttribute="centerY" secondItem="P71-RQ-w3Y" secondAttribute="centerY" id="G1B-4M-oiy"/>
                                     <constraint firstItem="PAe-DD-sEP" firstAttribute="centerX" secondItem="P71-RQ-w3Y" secondAttribute="centerX" id="oUe-yU-ESX"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yda-zQ-zIG">
-                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cEZ-24-kev">
-                                        <rect key="frame" x="123.5" y="232.5" width="128" height="128"/>
-                                    </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-j7-EfD">
-                                        <rect key="frame" x="169" y="360.5" width="37" height="37"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="cEZ-24-kev" firstAttribute="centerX" secondItem="yda-zQ-zIG" secondAttribute="centerX" id="4Jc-pu-W8H"/>
-                                    <constraint firstItem="Khc-j7-EfD" firstAttribute="centerX" secondItem="yda-zQ-zIG" secondAttribute="centerX" id="DeQ-sV-gQ5"/>
-                                    <constraint firstItem="cEZ-24-kev" firstAttribute="centerY" secondItem="yda-zQ-zIG" secondAttribute="centerY" id="DlF-vf-abe"/>
-                                    <constraint firstItem="Khc-j7-EfD" firstAttribute="top" secondItem="cEZ-24-kev" secondAttribute="bottom" id="UKU-y4-vFi"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -46,24 +46,12 @@ class ViewController: UIViewController {
     @IBAction func onOfflineButtonClick(_ sender: Any) {
         offlineView.isHidden = true
         webViewContainer.isHidden = false
-        loadAppUrl()
+        activityIndicatorView.isHidden = false
+        tryLoadAppUrl()
     }
     
     // Observers for updating UI
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if (keyPath == #keyPath(WKWebView.isLoading)) {
-            // show activity indicator
-
-            /*
-            // this causes troubles when swiping back and forward.
-            // having this disabled means that the activity view is only shown on the startup of the app.
-            // ...which is fair enough.
-            if (webView.isLoading) {
-                activityIndicatorView.isHidden = false
-                activityIndicator.startAnimating()
-            }
-            */
-        }
         if (keyPath == #keyPath(WKWebView.estimatedProgress)) {
             progressBar.progress = Float(webView.estimatedProgress)
         }
@@ -109,7 +97,6 @@ class ViewController: UIViewController {
         webView.scrollView.bounces = enableBounceWhenScrolling
 
         // init observers
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: NSKeyValueObservingOptions.new, context: nil)
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: NSKeyValueObservingOptions.new, context: nil)
     }
     
@@ -142,8 +129,8 @@ class ViewController: UIViewController {
     }
 
     // load startpage
-    func loadAppUrl() {
-        let urlRequest = URLRequest(url: webAppUrl!)
+    func tryLoadAppUrl() {
+        let urlRequest = URLRequest(url: webAppUrl!, timeoutInterval: initialLoadTimeoutSec)
         webView.load(urlRequest)
     }
     
@@ -151,7 +138,7 @@ class ViewController: UIViewController {
     func setupApp() {
         setupWebView()
         setupUI()
-        loadAppUrl()
+        tryLoadAppUrl()
     }
     
     // Cleanup
@@ -172,12 +159,14 @@ extension ViewController: WKNavigationDelegate {
         activityIndicatorView.isHidden = true
         activityIndicator.stopAnimating()
     }
+    
     // didFailProvisionalNavigation
     // == we are offline / page not available
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         // show offline screen
         offlineView.isHidden = false
         webViewContainer.isHidden = true
+        activityIndicatorView.isHidden = true
     }
 }
 
@@ -190,6 +179,7 @@ extension ViewController: WKUIDelegate {
         }
         return nil
     }
+    
     // restrict navigation to target host, open external links in 3rd party apps
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let requestUrl = navigationAction.request.url {

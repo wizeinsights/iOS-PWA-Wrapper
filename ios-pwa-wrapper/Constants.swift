@@ -27,6 +27,9 @@ let userAgentPostfix = "iOSApp"
 let useCustomUserAgent = false
 let customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_1 like Mac OS X) AppleWebKit/604.2.10 (KHTML, like Gecko) Mobile/15A8401"
 
+// Network settings
+let initialLoadTimeoutSec = 30.0
+
 // UI Settings
 let changeAppTitleToPageTitle = false
 let forceLargeTitle = false
